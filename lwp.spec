@@ -1,5 +1,6 @@
 Summary:	LWP thread library
 Summary(pl):	Biblioteka w±tków LWP
+Summary(pt_BR):	Biblioteca LWP thread
 Name:		lwp
 Version:	1.9
 Release:	2
@@ -22,9 +23,15 @@ Biblioteka w±tków w przestrzeni u¿ytkownika LWP. Biblioteka ta jest
 u¿ywana przez rozproszony system plików Coda, RVM (biblioteka VM),
 RPC2/SFTP (biblioteka zdalnych wywo³añ procedur).
 
+%description -l pt_BR
+Biblioteca LWP para threads em userspace. Esta biblioteca é utilizada
+pelo Coda (um sistema de arquivos distribuído) e pelas bibliotecas RVM
+e RPC2/SFTP.
+
 %package devel
 Summary:	LWP thread library development files
 Summary(pl):	Pliki dla programistów u¿ywaj±cych LWP
+Summary(pt_BR):	Arquivos para desenvolvimento com a biblioteca LWP thread
 Group:		Development/Libraries
 Requires:	%{name} = %{version}
 
@@ -38,9 +45,15 @@ distributed filesystem, RVM (a persistent VM library), and RPC2/SFTP
 Pliki nag³ówkowe do tworzenia programów u¿ywaj±cych biblioteki w±tków
 w przestrzeni u¿ytkownika LWP.
 
+%description devel -l pt_BR
+Biblioteca LWP para threads em userspace. Esta biblioteca é utilizada
+pelo Coda (um sistema de arquivos distribuído) e pelas bibliotecas RVM
+e RPC2/SFTP.
+
 %package static
 Summary:	LWP thread library static libraries
 Summary(pl):	Statyczne biblioteki LWP
+Summary(pt_BR):	Bibliteca estática LWP thread
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}
 
@@ -52,6 +65,11 @@ distributed filesystem, RVM (a persistent VM library), and RPC2/SFTP
 
 %description static -l pl
 Statyczna wersja biblioteki w±tków w przestrzeni u¿ytkownika LWP.
+
+%description static -l pt_BR
+Biblioteca LWP para threads em userspace. Esta biblioteca é utilizada
+pelo Coda (um sistema de arquivos distribuído) e pelas bibliotecas RVM
+e RPC2/SFTP.
 
 %prep
 %setup -q
