@@ -8,7 +8,6 @@ License:	LGPL v2
 Group:		Libraries
 Source0:	ftp://ftp.coda.cs.cmu.edu/pub/lwp/src/%{name}-%{version}.tar.gz
 # Source0-md5:	5b4139c9b1ac393de433683ed355425b
-# Source0-size:	365064
 Patch0:		%{name}-configure.patch
 Patch1:		%{name}-amd64.patch
 URL:		http://www.coda.cs.cmu.edu/
