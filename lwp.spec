@@ -2,12 +2,16 @@ Summary:	LWP thread library
 Summary(pl):	Biblioteka w±tków LWP
 Name:		lwp
 Version:	1.9
-Release:	1
+Release:	2
 License:	GPL (?LGPL)
-Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
+Group:		Libraries
+Group(de):	Libraries
+Group(es):	Bibliotecas
+Group(fr):	Librairies
+Group(pl):	Biblioteki
+Group(pt_BR):	Bibliotecas
+Group(ru):	âÉÂÌÉÏÔÅËÉ
+Group(uk):	â¦ÂÌ¦ÏÔÅËÉ
 Source0:	ftp://ftp.coda.cs.cmu.edu/pub/lwp/src/%{name}-%{version}.tar.gz
 URL:		http://www.coda.cs.cmu.edu/
 BuildRequires:	autoconf
@@ -20,12 +24,22 @@ The LWP userspace threads library. The LWP threads library is used by
 the Coda distributed filesystem, RVM (a persistent VM library), and
 RPC2/SFTP (remote procedure call library).
 
+%description -l pl
+Biblioteka w±tków w przestrzeni u¿ytkownika LWP. Biblioteka ta jest
+u¿ywana przez rozproszony system plików Coda, RVM (biblioteka VM),
+RPC2/SFTP (biblioteka zdalnych wywo³añ procedur).
+
 %package devel
 Summary:	LWP thread library development files
+Summary(pl):	Pliki dla programistów u¿ywaj±cych LWP
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
+Group(es):	Desarrollo/Bibliotecas
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
+Group(pt_BR):	Desenvolvimento/Bibliotecas
+Group(ru):	òÁÚÒÁÂÏÔËÁ/âÉÂÌÉÏÔÅËÉ
+Group(uk):	òÏÚÒÏÂËÁ/â¦ÂÌ¦ÏÔÅËÉ
 Requires:	%{name} = %{version}
 
 %description devel
@@ -34,12 +48,21 @@ threads library. The LWP threads library is used by the Coda
 distributed filesystem, RVM (a persistent VM library), and RPC2/SFTP
 (a remote procedure call library).
 
+%description devel -l pl
+Pliki nag³ówkowe do tworzenia programów u¿ywaj±cych biblioteki w±tków
+w przestrzeni u¿ytkownika LWP.
+
 %package static
 Summary:	LWP thread library static libraries
+Summary(pl):	Statyczne biblioteki LWP
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
+Group(es):	Desarrollo/Bibliotecas
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
+Group(pt_BR):	Desenvolvimento/Bibliotecas
+Group(ru):	òÁÚÒÁÂÏÔËÁ/âÉÂÌÉÏÔÅËÉ
+Group(uk):	òÏÚÒÏÂËÁ/â¦ÂÌ¦ÏÔÅËÉ
 Requires:	%{name}-devel = %{version}
 
 %description static
@@ -47,6 +70,9 @@ Static libraries for developing programs using the LWP userspace
 threads library. The LWP threads library is used by the Coda
 distributed filesystem, RVM (a persistent VM library), and RPC2/SFTP
 (a remote procedure call library).
+
+%description static -l pl
+Statyczna wersja biblioteki w±tków w przestrzeni u¿ytkownika LWP.
 
 %prep
 %setup -q
