@@ -4,13 +4,14 @@ Summary(pt_BR):	Biblioteca LWP thread
 Name:		lwp
 Version:	1.11
 Release:	1
-License:	GPL (?LGPL)
+License:	LGPL v2
 Group:		Libraries
 Source0:	ftp://ftp.coda.cs.cmu.edu/pub/lwp/src/%{name}-%{version}.tar.gz
 # Source0-md5:	6a4a8a0284b2f91d40065923478a5a62
 Patch0:		%{name}-configure.patch
+Patch1:		%{name}-amd64.patch
 URL:		http://www.coda.cs.cmu.edu/
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -23,8 +24,8 @@ RPC2/SFTP (remote procedure call library).
 
 %description -l pl
 Biblioteka w±tków w przestrzeni u¿ytkownika LWP. Biblioteka ta jest
-u¿ywana przez rozproszony system plików Coda, RVM (biblioteka VM),
-RPC2/SFTP (biblioteka zdalnych wywo³añ procedur).
+u¿ywana przez rozproszony system plików Coda, RVM (bibliotekê VM),
+RPC2/SFTP (bibliotekê zdalnych wywo³añ procedur).
 
 %description -l pt_BR
 Biblioteca LWP para threads em userspace. Esta biblioteca é utilizada
@@ -36,55 +37,45 @@ Summary:	LWP thread library development files
 Summary(pl):	Pliki dla programistów u¿ywaj±cych LWP
 Summary(pt_BR):	Arquivos para desenvolvimento com a biblioteca LWP thread
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 Obsoletes:	liblwp2-devel
 
 %description devel
 Headers and libraries for developing programs using the LWP userspace
-threads library. The LWP threads library is used by the Coda
-distributed filesystem, RVM (a persistent VM library), and RPC2/SFTP
-(a remote procedure call library).
+threads library.
 
 %description devel -l pl
 Pliki nag³ówkowe do tworzenia programów u¿ywaj±cych biblioteki w±tków
-w przestrzeni u¿ytkownika LWP. Biblioteka ta jest u¿ywana przez rozproszony
-system plików Coda, RVM (biblioteka VM), RPC2/SFTP (biblioteka zdalnych
-wywo³añ procedur).
+w przestrzeni u¿ytkownika LWP.
 
 %description devel -l pt_BR
-Biblioteca LWP para threads em userspace. Esta biblioteca é utilizada
-pelo Coda (um sistema de arquivos distribuído) e pelas bibliotecas RVM
-e RPC2/SFTP.
+Arquivos para desenvolvimento com a biblioteca LWP threads em
+userspace.
 
 %package static
 Summary:	LWP thread library static libraries
 Summary(pl):	Statyczne biblioteki LWP
 Summary(pt_BR):	Bibliteca estática LWP thread
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static libraries for developing programs using the LWP userspace
-threads library. The LWP threads library is used by the Coda
-distributed filesystem, RVM (a persistent VM library), and RPC2/SFTP
-(a remote procedure call library).
+threads library.
 
 %description static -l pl
 Statyczna wersja biblioteki w±tków w przestrzeni u¿ytkownika LWP.
-Biblioteka ta jest u¿ywana przez rozproszony system plików Coda, RVM
-(biblioteka VM), RPC2/SFTP (biblioteka zdalnych wywo³añ procedur).
 
 %description static -l pt_BR
-Biblioteca LWP para threads em userspace. Esta biblioteca é utilizada
-pelo Coda (um sistema de arquivos distribuído) e pelas bibliotecas RVM
-e RPC2/SFTP.
+Biblioteca estática LWP para threads em userspace.
 
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
-rm -f missing configure.ac
+rm -f configure.ac
 %{__libtoolize}
 %{__autoheader}
 %{__aclocal}
@@ -96,7 +87,8 @@ rm -f missing configure.ac
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} DESTDIR=$RPM_BUILD_ROOT install
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -106,11 +98,11 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_libdir}/liblwp.so.*.*
 
 %files devel
 %defattr(644,root,root,755)
-%doc PORTING README NEWS ChangeLog AUTHORS
 %attr(755,root,root) %{_libdir}/liblwp.so
 %{_libdir}/liblwp.la
 %{_includedir}/lwp
