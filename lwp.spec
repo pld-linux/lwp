@@ -47,8 +47,8 @@ distributed filesystem, RVM (a persistent VM library), and RPC2/SFTP
 
 %description devel -l pl
 Pliki nag³ówkowe do tworzenia programów u¿ywaj±cych biblioteki w±tków
-w przestrzeni u¿ytkownika LWP. Biblioteka ta jest u¿ywana przez rozproszony 
-system plików Coda, RVM (biblioteka VM), RPC2/SFTP (biblioteka zdalnych 
+w przestrzeni u¿ytkownika LWP. Biblioteka ta jest u¿ywana przez rozproszony
+system plików Coda, RVM (biblioteka VM), RPC2/SFTP (biblioteka zdalnych
 wywo³añ procedur).
 
 %description devel -l pt_BR
@@ -71,7 +71,7 @@ distributed filesystem, RVM (a persistent VM library), and RPC2/SFTP
 
 %description static -l pl
 Statyczna wersja biblioteki w±tków w przestrzeni u¿ytkownika LWP.
-Biblioteka ta jest u¿ywana przez rozproszony system plików Coda, RVM 
+Biblioteka ta jest u¿ywana przez rozproszony system plików Coda, RVM
 (biblioteka VM), RPC2/SFTP (biblioteka zdalnych wywo³añ procedur).
 
 %description static -l pt_BR
