@@ -12,6 +12,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+Obsoletes:	liblwp2
 
 %description
 The LWP userspace threads library. The LWP threads library is used by
@@ -34,6 +35,7 @@ Summary(pl):	Pliki dla programistów u¿ywaj±cych LWP
 Summary(pt_BR):	Arquivos para desenvolvimento com a biblioteca LWP thread
 Group:		Development/Libraries
 Requires:	%{name} = %{version}
+Obsoletes:	liblwp2-devel
 
 %description devel
 Headers and libraries for developing programs using the LWP userspace
