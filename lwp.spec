@@ -9,6 +9,9 @@ Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
 Source0:	ftp://ftp.coda.cs.cmu.edu/pub/lwp/src/%{name}-%{version}.tar.gz
 URL:		http://www.coda.cs.cmu.edu/
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -49,11 +52,12 @@ distributed filesystem, RVM (a persistent VM library), and RPC2/SFTP
 touch ChangeLog
 
 %build
+rm -f missing
+libtoolize --copy --force
 autoheader
 aclocal
-libtoolize
-automake --copy --add-missing
 autoconf
+automake --copy --add-missing
 %configure
 %{__make}
 
