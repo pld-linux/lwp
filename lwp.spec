@@ -1,8 +1,8 @@
 Summary:	LWP thread library
 Summary(pl):	Biblioteka w±tków LWP
 Name:		lwp
-Version:	1.8
-Release:	2
+Version:	1.9
+Release:	1
 License:	GPL (?LGPL)
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
