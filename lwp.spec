@@ -13,7 +13,6 @@ URL:		http://www.coda.cs.cmu.edu/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
-BuildRequires:	kernel-headers
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	liblwp2
 
@@ -91,7 +90,7 @@ rm -f missing configure.ac
 %{__aclocal}
 %{__autoconf}
 %{__automake}
-%configure CFLAGS='-O2 -I/usr/src/linux/include'
+%configure
 %{__make}
 
 %install
