@@ -111,7 +111,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc PORTING README NEWS ChangeLog AUTHORS
 %attr(755,root,root) %{_libdir}/liblwp.so
-%attr(755,root,root) %{_libdir}/liblwp.la
+%{_libdir}/liblwp.la
 %{_includedir}/lwp
 
 %files static
