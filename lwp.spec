@@ -1,14 +1,13 @@
 Summary:	LWP thread library
 Name:		lwp
-Version:	1.6
-Release:	0.cvs20001115.1
+Version:	1.8
+Release:	1
 License:	GPL (?LGPL)
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
-# NOTE: this version tar ball was created from cvs resources
-Source0:	ftp://ftp.coda.cs.cmu.edu:/pub/lwp/src/%{name}-cvs20001115.tgz
+Source0:	ftp://ftp.coda.cs.cmu.edu/pub/lwp/src/%{name}-%{version}.tar.gz
 URL:		http://www.coda.cs.cmu.edu/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -46,7 +45,7 @@ distributed filesystem, RVM (a persistent VM library), and RPC2/SFTP
 (a remote procedure call library).
 
 %prep
-%setup -q -n lwp
+%setup -q
 touch ChangeLog
 
 %build
