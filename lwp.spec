@@ -8,7 +8,7 @@ Group(de):	Entwicklung/Libraries
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
 # NOTE: this version tar ball was created from cvs resources
-Source0:	ftp.coda.cs.cmu.edu:/pub/lwp/src/%{name}-cvs20001115.tgz
+Source0:	ftp://ftp.coda.cs.cmu.edu:/pub/lwp/src/%{name}-cvs20001115.tgz
 URL:		http://www.coda.cs.cmu.edu/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
