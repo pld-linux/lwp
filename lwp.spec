@@ -2,12 +2,12 @@ Summary:	LWP thread library
 Summary(pl):	Biblioteka w±tków LWP
 Summary(pt_BR):	Biblioteca LWP thread
 Name:		lwp
-Version:	1.10
-Release:	2
+Version:	1.11
+Release:	1
 License:	GPL (?LGPL)
 Group:		Libraries
 Source0:	ftp://ftp.coda.cs.cmu.edu/pub/lwp/src/%{name}-%{version}.tar.gz
-# Source0-md5:	299d40e5a40924754505e2340ce74dad
+# Source0-md5:	6a4a8a0284b2f91d40065923478a5a62
 Patch0:		%{name}-configure.patch
 URL:		http://www.coda.cs.cmu.edu/
 BuildRequires:	autoconf
