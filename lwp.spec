@@ -81,7 +81,7 @@ touch ChangeLog
 libtoolize --copy --force
 autoheader
 aclocal
-autoconf
+%{__autoconf}
 %configure
 %{__make}
 
