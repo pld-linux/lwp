@@ -45,7 +45,9 @@ distributed filesystem, RVM (a persistent VM library), and RPC2/SFTP
 
 %description devel -l pl
 Pliki nag³ówkowe do tworzenia programów u¿ywaj±cych biblioteki w±tków
-w przestrzeni u¿ytkownika LWP.
+w przestrzeni u¿ytkownika LWP. Biblioteka ta jest u¿ywana przez rozproszony 
+system plików Coda, RVM (biblioteka VM), RPC2/SFTP (biblioteka zdalnych 
+wywo³añ procedur).
 
 %description devel -l pt_BR
 Biblioteca LWP para threads em userspace. Esta biblioteca é utilizada
@@ -67,6 +69,8 @@ distributed filesystem, RVM (a persistent VM library), and RPC2/SFTP
 
 %description static -l pl
 Statyczna wersja biblioteki w±tków w przestrzeni u¿ytkownika LWP.
+Biblioteka ta jest u¿ywana przez rozproszony system plików Coda, RVM 
+(biblioteka VM), RPC2/SFTP (biblioteka zdalnych wywo³añ procedur).
 
 %description static -l pt_BR
 Biblioteca LWP para threads em userspace. Esta biblioteca é utilizada
@@ -90,8 +94,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} DESTDIR=$RPM_BUILD_ROOT install
 
-gzip -9nf PORTING README NEWS ChangeLog AUTHORS
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -104,7 +106,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%doc *.gz
+%doc PORTING README NEWS ChangeLog AUTHORS
 %attr(755,root,root) %{_libdir}/liblwp.so
 %attr(755,root,root) %{_libdir}/liblwp.la
 %{_includedir}/lwp
