@@ -1,13 +1,15 @@
 Summary:	LWP thread library
 Name:		lwp
-Version:	cvs20001115
-Release:	1
+Version:	1.6
+Release:	0.cvs20001115.1
 License:	GPL (?LGPL)
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
-Source0:	%{name}-%{version}.tgz
+# NOTE: this version tar ball was created from cvs resources
+Source0:	ftp.coda.cs.cmu.edu:/pub/lwp/src/%{name}-cvs20001115.tgz
+URL:		http://www.coda.cs.cmu.edu/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -45,21 +47,23 @@ distributed filesystem, RVM (a persistent VM library), and RPC2/SFTP
 
 %prep
 %setup -q -n lwp
+touch ChangeLog
 
 %build
-touch ChangeLog
 autoheader
 aclocal
 libtoolize
 automake --copy --add-missing
 autoconf
 %configure
-%{__make} OPTFLAGS="$RPM_OPT_FLAGS"
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} DESTDIR=$RPM_BUILD_ROOT install
+
+gzip -9nf PORTING README NEWS ChangeLog AUTHORS
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -69,11 +73,11 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc PORTING README NEWS INSTALL ChangeLog AUTHORS COPYING
 %attr(755,root,root) %{_libdir}/liblwp.so.*.*
 
 %files devel
 %defattr(644,root,root,755)
+%doc *.gz
 %attr(755,root,root) %{_libdir}/liblwp.so
 %attr(755,root,root) %{_libdir}/liblwp.la
 %{_includedir}/lwp
