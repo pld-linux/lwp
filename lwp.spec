@@ -85,8 +85,8 @@ e RPC2/SFTP.
 %build
 rm -f missing configure.ac
 %{__libtoolize}
-autoheader
-aclocal
+%{__autoheader}
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure
