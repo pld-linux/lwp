@@ -1,7 +1,8 @@
 Summary:	LWP thread library
+Summary(pl):	Biblioteka w±tków LWP
 Name:		lwp
 Version:	1.8
-Release:	1
+Release:	2
 License:	GPL (?LGPL)
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
@@ -52,12 +53,10 @@ distributed filesystem, RVM (a persistent VM library), and RPC2/SFTP
 touch ChangeLog
 
 %build
-rm -f missing
 libtoolize --copy --force
 autoheader
 aclocal
 autoconf
-automake --copy --add-missing
 %configure
 %{__make}
 
