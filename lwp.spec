@@ -3,10 +3,11 @@ Summary(pl):	Biblioteka w±tków LWP
 Summary(pt_BR):	Biblioteca LWP thread
 Name:		lwp
 Version:	1.9
-Release:	3
+Release:	4
 License:	GPL (?LGPL)
 Group:		Libraries
 Source0:	ftp://ftp.coda.cs.cmu.edu/pub/lwp/src/%{name}-%{version}.tar.gz
+Patch0:		%{name}-configure.patch
 URL:		http://www.coda.cs.cmu.edu/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -79,13 +80,15 @@ e RPC2/SFTP.
 
 %prep
 %setup -q
-touch ChangeLog
+%patch0 -p1
 
 %build
+rm -f missing configure.ac
 %{__libtoolize}
 autoheader
 aclocal
 %{__autoconf}
+%{__automake}
 %configure
 %{__make}
 
