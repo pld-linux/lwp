@@ -1,13 +1,13 @@
 Summary:	LWP thread library
 Name:		lwp
-Version:	1.5
+Version:	cvs20001115
 Release:	1
-License:	GPL
+License:	GPL (?LGPL)
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
-Source0:	ftp://ftp.coda.cs.cmu.edu/pub/coda/src/%{name}-%{version}.tar.gz
+Source0:	%{name}-%{version}.tar.gz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -44,11 +44,17 @@ distributed filesystem, RVM (a persistent VM library), and RPC2/SFTP
 (a remote procedure call library).
 
 %prep
-%setup -q
+%setup -q -n lwp
 
 %build
+touch ChangeLog
+autoheader
+aclocal
+libtoolize
+automake --copy --add-missing
+autoconf
 %configure
-%{__make}
+%{__make} OPTFLAGS="$RPM_OPT_FLAGS"
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -63,14 +69,15 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/lib*.so.*.*
+%doc PORTING README NEWS INSTALL ChangeLog AUTHORS COPYING
+%attr(755,root,root) %{_libdir}/liblwp.so.*.*
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/lib*.so
-%attr(755,root,root) %{_libdir}/lib*.la
+%attr(755,root,root) %{_libdir}/liblwp.so
+%attr(755,root,root) %{_libdir}/liblwp.la
 %{_includedir}/lwp
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/lib*.a
+%{_libdir}/liblwp.a
