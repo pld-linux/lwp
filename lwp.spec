@@ -5,13 +5,6 @@ Version:	1.9
 Release:	2
 License:	GPL (?LGPL)
 Group:		Libraries
-Group(de):	Libraries
-Group(es):	Bibliotecas
-Group(fr):	Librairies
-Group(pl):	Biblioteki
-Group(pt_BR):	Bibliotecas
-Group(ru):	Библиотеки
-Group(uk):	Б╕бл╕отеки
 Source0:	ftp://ftp.coda.cs.cmu.edu/pub/lwp/src/%{name}-%{version}.tar.gz
 URL:		http://www.coda.cs.cmu.edu/
 BuildRequires:	autoconf
@@ -33,13 +26,6 @@ RPC2/SFTP (biblioteka zdalnych wywoЁaЯ procedur).
 Summary:	LWP thread library development files
 Summary(pl):	Pliki dla programistСw u©ywaj╠cych LWP
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name} = %{version}
 
 %description devel
@@ -56,13 +42,6 @@ w przestrzeni u©ytkownika LWP.
 Summary:	LWP thread library static libraries
 Summary(pl):	Statyczne biblioteki LWP
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name}-devel = %{version}
 
 %description static
