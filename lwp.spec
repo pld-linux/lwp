@@ -7,6 +7,7 @@ Release:	1
 License:	GPL (?LGPL)
 Group:		Libraries
 Source0:	ftp://ftp.coda.cs.cmu.edu/pub/lwp/src/%{name}-%{version}.tar.gz
+# Source0-md5:	299d40e5a40924754505e2340ce74dad
 Patch0:		%{name}-configure.patch
 URL:		http://www.coda.cs.cmu.edu/
 BuildRequires:	autoconf
