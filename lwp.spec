@@ -78,7 +78,7 @@ e RPC2/SFTP.
 touch ChangeLog
 
 %build
-libtoolize --copy --force
+%{__libtoolize}
 autoheader
 aclocal
 %{__autoconf}
