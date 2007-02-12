@@ -1,6 +1,6 @@
 Summary:	LWP thread library
-Summary(pl):	Biblioteka w±tków LWP
-Summary(pt_BR):	Biblioteca LWP thread
+Summary(pl.UTF-8):   Biblioteka wÄ…tkÃ³w LWP
+Summary(pt_BR.UTF-8):   Biblioteca LWP thread
 Name:		lwp
 Version:	2.3
 Release:	1
@@ -21,20 +21,20 @@ The LWP userspace threads library. The LWP threads library is used by
 the Coda distributed filesystem, RVM (a persistent VM library), and
 RPC2/SFTP (remote procedure call library).
 
-%description -l pl
-Biblioteka w±tków w przestrzeni u¿ytkownika LWP. Biblioteka ta jest
-u¿ywana przez rozproszony system plików Coda, RVM (bibliotekê VM),
-RPC2/SFTP (bibliotekê zdalnych wywo³añ procedur).
+%description -l pl.UTF-8
+Biblioteka wÄ…tkÃ³w w przestrzeni uÅ¼ytkownika LWP. Biblioteka ta jest
+uÅ¼ywana przez rozproszony system plikÃ³w Coda, RVM (bibliotekÄ™ VM),
+RPC2/SFTP (bibliotekÄ™ zdalnych wywoÅ‚aÅ„ procedur).
 
-%description -l pt_BR
-Biblioteca LWP para threads em userspace. Esta biblioteca é utilizada
-pelo Coda (um sistema de arquivos distribuído) e pelas bibliotecas RVM
+%description -l pt_BR.UTF-8
+Biblioteca LWP para threads em userspace. Esta biblioteca Ã© utilizada
+pelo Coda (um sistema de arquivos distribuÃ­do) e pelas bibliotecas RVM
 e RPC2/SFTP.
 
 %package devel
 Summary:	LWP thread library development files
-Summary(pl):	Pliki dla programistów u¿ywaj±cych LWP
-Summary(pt_BR):	Arquivos para desenvolvimento com a biblioteca LWP thread
+Summary(pl.UTF-8):   Pliki dla programistÃ³w uÅ¼ywajÄ…cych LWP
+Summary(pt_BR.UTF-8):   Arquivos para desenvolvimento com a biblioteca LWP thread
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Obsoletes:	liblwp2-devel
@@ -43,18 +43,18 @@ Obsoletes:	liblwp2-devel
 Headers and libraries for developing programs using the LWP userspace
 threads library.
 
-%description devel -l pl
-Pliki nag³ówkowe do tworzenia programów u¿ywaj±cych biblioteki w±tków
-w przestrzeni u¿ytkownika LWP.
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe do tworzenia programÃ³w uÅ¼ywajÄ…cych biblioteki wÄ…tkÃ³w
+w przestrzeni uÅ¼ytkownika LWP.
 
-%description devel -l pt_BR
+%description devel -l pt_BR.UTF-8
 Arquivos para desenvolvimento com a biblioteca LWP threads em
 userspace.
 
 %package static
 Summary:	LWP thread library static libraries
-Summary(pl):	Statyczne biblioteki LWP
-Summary(pt_BR):	Bibliteca estática LWP thread
+Summary(pl.UTF-8):   Statyczne biblioteki LWP
+Summary(pt_BR.UTF-8):   Bibliteca estÃ¡tica LWP thread
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
@@ -62,11 +62,11 @@ Requires:	%{name}-devel = %{version}-%{release}
 Static libraries for developing programs using the LWP userspace
 threads library.
 
-%description static -l pl
-Statyczna wersja biblioteki w±tków w przestrzeni u¿ytkownika LWP.
+%description static -l pl.UTF-8
+Statyczna wersja biblioteki wÄ…tkÃ³w w przestrzeni uÅ¼ytkownika LWP.
 
-%description static -l pt_BR
-Biblioteca estática LWP para threads em userspace.
+%description static -l pt_BR.UTF-8
+Biblioteca estÃ¡tica LWP para threads em userspace.
 
 %prep
 %setup -q
