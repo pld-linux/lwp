@@ -1,6 +1,6 @@
 Summary:	LWP thread library
-Summary(pl.UTF-8):   Biblioteka wątków LWP
-Summary(pt_BR.UTF-8):   Biblioteca LWP thread
+Summary(pl.UTF-8):	Biblioteka wątków LWP
+Summary(pt_BR.UTF-8):	Biblioteca LWP thread
 Name:		lwp
 Version:	2.3
 Release:	1
@@ -33,8 +33,8 @@ e RPC2/SFTP.
 
 %package devel
 Summary:	LWP thread library development files
-Summary(pl.UTF-8):   Pliki dla programistów używających LWP
-Summary(pt_BR.UTF-8):   Arquivos para desenvolvimento com a biblioteca LWP thread
+Summary(pl.UTF-8):	Pliki dla programistów używających LWP
+Summary(pt_BR.UTF-8):	Arquivos para desenvolvimento com a biblioteca LWP thread
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Obsoletes:	liblwp2-devel
@@ -53,8 +53,8 @@ userspace.
 
 %package static
 Summary:	LWP thread library static libraries
-Summary(pl.UTF-8):   Statyczne biblioteki LWP
-Summary(pt_BR.UTF-8):   Bibliteca estática LWP thread
+Summary(pl.UTF-8):	Statyczne biblioteki LWP
+Summary(pt_BR.UTF-8):	Bibliteca estática LWP thread
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
