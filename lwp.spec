@@ -2,12 +2,12 @@ Summary:	LWP thread library
 Summary(pl.UTF-8):	Biblioteka wątków LWP
 Summary(pt_BR.UTF-8):	Biblioteca LWP thread
 Name:		lwp
-Version:	2.3
-Release:	1
+Version:	2.4
+Release:	0.1
 License:	LGPL v2
 Group:		Libraries
 Source0:	ftp://ftp.coda.cs.cmu.edu/pub/lwp/src/%{name}-%{version}.tar.gz
-# Source0-md5:	8dfc35e6ef31598cfa35cb377e2387f8
+# Source0-md5:	5bd3221562de580d51f18c547f7606e3
 Patch0:		%{name}-configure.patch
 URL:		http://www.coda.cs.cmu.edu/
 BuildRequires:	autoconf >= 2.50
