@@ -1,13 +1,16 @@
+# TODO:
+# - Fix build so __aclocal doesn't kill it.
+# - Patch0 no longer needed?
 Summary:	LWP thread library
 Summary(pl.UTF-8):	Biblioteka wątków LWP
 Summary(pt_BR.UTF-8):	Biblioteca LWP thread
 Name:		lwp
-Version:	2.4
+Version:	2.6
 Release:	0.1
 License:	LGPL v2
 Group:		Libraries
 Source0:	ftp://ftp.coda.cs.cmu.edu/pub/lwp/src/%{name}-%{version}.tar.gz
-# Source0-md5:	5bd3221562de580d51f18c547f7606e3
+# Source0-md5:	65ba6faddf2c9741d4a481b0e9661a34
 Patch0:		%{name}-configure.patch
 URL:		http://www.coda.cs.cmu.edu/
 BuildRequires:	autoconf >= 2.50
@@ -70,13 +73,13 @@ Biblioteca estática LWP para threads em userspace.
 
 %prep
 %setup -q
-%patch0 -p1
+#%patch0 -p1
 
 %build
 rm -f configure.ac
 %{__libtoolize}
 %{__autoheader}
-%{__aclocal}
+#%{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure
@@ -104,6 +107,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/liblwp.so
 %{_libdir}/liblwp.la
 %{_includedir}/lwp
+%{_pkgconfigdir}/lwp.pc
 
 %files static
 %defattr(644,root,root,755)
